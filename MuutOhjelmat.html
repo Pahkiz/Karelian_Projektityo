@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Yhteystiedot</title>
+    <title>Bootstrap Tutorial Sample Page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -32,7 +32,7 @@
         >&times;</a
       >
       <ul>
-        <li><a href="Etusivu.html">Etusivulle</a></li>
+        <li><a href="index.html">Etusivulle</a></li>
         <li class="sub-menu">
           <a href="#sideLT"
             >Laitteisto & tilaratkaisut
@@ -75,27 +75,39 @@
       <div id="main">
         <header class="page-header header container-fluid">
           <div class="description">
-            <h1 style="color: white">Sivuston tekijän esittely</h1>
-            <div class="Juho">
-              <img src="Images/Juho.png" alt="" />
-            </div>
-            <div class="tabContainer">
-              <div class="tabContent">
-                <p>Esittelyteksti</p>
-                <br />
-                <address>
-                  Laita mailia
-                  <a href="mailto:Juho.Pasanen2@edu.savonia.fi">Tekijälle</a
-                  ><br />
-                  <br />Tai vilkaise
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/juho-pasanen-35b0b522b/"
-                    >LinkedIniä</a
-                  >
-                </address>
+            <h1 style="color: white">VR-pelit</h1>
+            <p style="color: white">
+              Mitäs <b style="color: red">RAKENTAVAA</b> siellä VR-mailmassa
+              voikaan tehdä?
+            </p>
+            <div id="content">
+              <div class="tabContainer">
+                <ul class="tabs">
+                  <li>
+                    <a src="tab1" href="javascript:void(0);" class="active"
+                      >Kehityssovellukset</a
+                    >
+                  </li>
+                  <li>
+                    <a src="tab2" href="javascript:void(0);"
+                      >3D video-sovellus</a
+                    >
+                  </li>
+                </ul>
+                <div class="tabContent">
+                  <div id="tab1">
+                    <span>UnityVR:stä tekstiä</span>
+                  </div>
+                  <div id="tab2">
+                    <span>DeoVR videosovelluksesta tekstiä</span>
+                  </div>
+                </div>
+                <!-- /tabContent -->
               </div>
+              <!-- /tabContainer -->
             </div>
+            <!-- /content -->
+            <!-- Use any element to open the sidenav -->
             <button onclick="openNav()">Menu</button>
           </div>
         </header>

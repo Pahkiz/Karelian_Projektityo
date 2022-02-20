@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Etusivu</title>
+    <title>Bootstrap Tutorial Sample Page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -32,7 +32,7 @@
         >&times;</a
       >
       <ul>
-        <li><a href="Etusivu.html">Etusivulle</a></li>
+        <li><a href="index.html">Etusivulle</a></li>
         <li class="sub-menu">
           <a href="#sideLT"
             >Laitteisto & tilaratkaisut
@@ -70,16 +70,45 @@
       </ul>
     </nav>
 
-    <!--  Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
     <div class="overlay">
       <div id="main">
         <header class="page-header header container-fluid">
           <div class="description">
-            <h1 style="color: white">Tervetuloa!</h1>
+            <h1 style="color: white">VR-pelit</h1>
             <p style="color: white">
-              Näiltä sivuilta löytät kuvauksia ja suosituksia omakohtaisista
-              kokemuksistani VR-ympäristössä..//sivusto ei hostaudu oikein
+              Mitäs <b style="color: red">MUKAVAA</b> siellä VR-mailmassa
+              voikaan tehdä?
             </p>
+            <div id="content">
+              <div class="tabContainer">
+                <ul class="tabs">
+                  <li>
+                    <a src="tab1" href="javascript:void(0);" class="active"
+                      >Räiskintä</a
+                    >
+                  </li>
+                  <li>
+                    <a src="tab2" href="javascript:void(0);">Liikunnalliset</a>
+                  </li>
+                  <li><a src="tab3" href="javascript:void(0);">"Casual"</a></li>
+                </ul>
+                <div class="tabContent">
+                  <div id="tab1">
+                    <span>Pavlovista tekstiä</span>
+                  </div>
+                  <div id="tab2">
+                    <span>Beat saberistä tekstiä</span>
+                  </div>
+                  <div id="tab3">
+                    <span>VRChatistä tekstiä</span>
+                  </div>
+                </div>
+                <!-- /tabContent -->
+              </div>
+              <!-- /tabContainer -->
+            </div>
+            <!-- /content -->
             <!-- Use any element to open the sidenav -->
             <button onclick="openNav()">Menu</button>
           </div>
@@ -95,6 +124,19 @@
       $(".sub-menu a").click(function () {
         $(this).parent(".sub-menu").children("ul").slideToggle("100");
         $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
+      });
+      $("#content").on("click", ".tabContainer .tabs a", function (e) {
+        e.preventDefault(),
+          $(this)
+            .parents(".tabContainer")
+            .find(".tabContent > div")
+            .each(function () {
+              $(this).hide();
+            });
+
+        $(this).parents(".tabs").find("a").removeClass("active"),
+          $(this).toggleClass("active"),
+          $("#" + $(this).attr("src")).show();
       });
     </script>
   </body>
