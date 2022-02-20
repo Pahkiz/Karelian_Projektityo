@@ -55,7 +55,7 @@ li:hover {
 }
 
 .header {
-  background-image: url(Karelian_Projektityo/Images/FrontPageBG.jpeg);
+  background-image: url("Karelian_Projektityo/Images/FrontPageBG.jpeg");
   background-size: cover;
   background-position: center;
   position: relative;
